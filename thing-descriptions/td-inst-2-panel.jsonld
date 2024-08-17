@@ -1,0 +1,69 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1",
+	  {"pvont":"https://w3id.org/pvont#"}
+  ],
+  "title": "PV Panel",
+  "id": "urn:td_inst_panel_1",
+  "base": "https://semantix.siemens-bt.net:1881/solar/",
+  "description": "Photovoltaic installation for research purpose",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "panelVoltage": {
+      "title": "panelVoltage",
+      "pvont:represents": "pvont:voltage",
+      "pvont:hasUnits": "pvont:volts",
+      "pvont:hasTag": [ "pvont:panel", "pvont:output", "pvont:voltage" ],
+      "observable": false,
+      "readOnly": true,
+      "type": "number",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "panelvoltage"
+        }
+      ]
+    },
+    "panelCurrent": {
+      "title": "panelCurrent",
+      "pvont:represents": "pvont:current",
+      "pvont:hasUnits": "pvont:amperes",
+      "pvont:hasTag": [ "pvont:panel", "pvont:output", "pvont:current" ],
+      "observable": false,
+      "readOnly": true,
+      "description": "Output current in amperes",
+      "type": "number",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "panelcurrent"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+    {
+      "href": "td_inst_2_controller",
+      "rel": "controlledBy",
+      "type": "application/td+json"
+    }
+  ],
+  "forms": [
+    {
+      "op": [
+        "readallproperties"
+      ],
+      "href": "panelmeasurements"
+    }
+  ]
+}

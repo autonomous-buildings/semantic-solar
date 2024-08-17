@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "coreml",
+			"path": "../../../../../../../Users/ramanatg/Documents/PlatformIO/Projects/coreml"
+		},
+		{
+			"name": "solarino",
+			"path": "."
+		}
+	],
+	"settings": {
+		"nrf-connect.topdir": "c:\\ncs\\v2.1.0-rc1",
+		"nrf-connect.toolchain.path": "${nrf-connect.toolchain:2.1.0-rc1}",
+		"nrf-connect.applications": [
+			"c:\\Data\\Programming\\nrf\\temp\\beacon"
+		]
+	}
+}

@@ -1,0 +1,61 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "title": "Battery",
+  "id": "urn:td_inst_battery_1",
+  "base": "https://semantix.siemens-bt.net:1881/solar/",
+  "description": "Photovoltaic installation for research purpose",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "panelVoltage": {
+      "title": "batteryVoltage",
+      "observable": false,
+      "readOnly": true,
+      "type": "number",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "batteryvoltage"
+        }
+      ]
+    },
+    "panelCurrent": {
+      "title": "batteryCurrent",
+      "observable": false,
+      "readOnly": true,
+      "description": "Charging current",
+      "type": "number",
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "chargingcurrent"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+    {
+      "href": "td_inst_2_controller",
+      "rel": "controlledBy",
+      "type": "application/td+json"
+    }
+  ],
+  "forms": [
+    {
+      "op": [
+        "readallproperties"
+      ],
+      "href": "batterymeasurements"
+    }
+  ]
+}
